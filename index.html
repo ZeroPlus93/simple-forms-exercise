@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms challenge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1 class="form__title">Contact us</h1>
+      <form action="/" method="GET" class="main-form">
+        <section class="user-info">
+          <h2 class="form__subtitle">How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="username">Your Name</label>
+              <input type="text" name="user-name" id="username" required />
+            </li>
+            <li>
+              <label for="email">Your E-mail Address</label>
+              <input type="email" name="user-email" id="email" required />
+            </li>
+            <li>
+              <label for="phone-number">Your Phone Number</label>
+              <input
+                type="tel"
+                name="usernumber"
+                id="phone-number"
+                pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}"
+                placeholder="04xx-xx-xx-xx"
+                required
+              />
+            </li>
+            <li>
+              <label for="usermessage"> Your Message </label>
+              <textarea name="user-message" id="usermessage" rows="5">
+              </textarea>
+            </li>
+            <li>
+              <label for="discover">How did you find us?</label>
+              <select name="user-discover" id="discover">
+                <option>Web Search</option>
+                <option>Social Media</option>
+                <option>Advertisement</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+        <section class="user-contact">
+          <h2 class="form__subtitle">How should we reply?</h2>
+          <ul>
+            <li class="radio-control">
+              <input type="radio" name="contact" id="call" value="user-call" required/>
+              <label for="call">Call me</label>
+            </li>
+            <li class="radio-control">
+              <input
+                type="radio"
+                name="contact"
+                id="email"
+                value="user-email"
+              />
+              <label for="email">Send email</label>
+            </li>
+            <li class="radio-control">
+              <input
+                type="radio"
+                name="contact"
+                id="no-reply"
+                value="user-no-reply"
+              />
+              <label for="no-reply">Don't reply</label>
+            </li>
+          </ul>
+          <div class="check-control">
+            <input type="checkbox" name="user-term" id="terms" required/>
+            <label for="terms">Accept Terms</label>
+          </div>
+        </section>
+        <div class="btn-group">
+          <button id="clear" type="reset">Clear</button>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
